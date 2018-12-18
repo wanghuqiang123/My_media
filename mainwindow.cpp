@@ -28,21 +28,24 @@ bool MainWindow::construct()
 bool MainWindow::initMenuBar()
 {
     bool ret = true;
-    ret = ret && initFileMenu();
+    QMenuBar* mb = menuBar();
+    ret = ret && initFileMenu(mb);
 
     return ret;
 }
 bool MainWindow::initToolBar()
 {
     bool ret = true;
+    QToolBar* toolbar = addToolBar("Tool Bar");
+
     return ret;
 }
-bool MainWindow::initFileMenu()
+bool MainWindow::initFileMenu(QMenuBar* mb)
 {
     bool ret = true;
+
     return ret;
 }
-
 MainWindow::~MainWindow()
 {
 

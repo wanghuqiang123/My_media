@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMenu>
+#include <QMenuBar>
+#include <QToolBar>
 
 class MainWindow : public QMainWindow
 {
@@ -18,7 +21,7 @@ protected:
     bool initMenuBar();
     bool initToolBar();
 
-    bool initFileMenu();
+    bool initFileMenu(QMenuBar*);
 };
 
 #endif // MAINWINDOW_H
