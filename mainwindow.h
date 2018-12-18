@@ -14,6 +14,11 @@ public:
     ~MainWindow();
 protected:
     MainWindow(QWidget *parent = 0);
+
+    bool initMenuBar();
+    bool initToolBar();
+
+    bool initFileMenu();
 };
 
 #endif // MAINWINDOW_H
