@@ -22,6 +22,8 @@ protected:
     bool initToolBar();
 
     bool initFileMenu(QMenuBar*);
+private:
+    bool makeAction(QAction*& ,QWidget* , QString , int );
 };
 
 #endif // MAINWINDOW_H

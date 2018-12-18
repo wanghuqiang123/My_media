@@ -43,6 +43,43 @@ bool MainWindow::initToolBar()
 bool MainWindow::initFileMenu(QMenuBar* mb)
 {
     bool ret = true;
+    QMenu* menu = new QMenu("File",mb);
+    ret = (menu != NULL);
+    if(ret)
+    {
+        QAction* action = nullptr;
+        ret = ret && makeAction(action,mb,"Open(O)",Qt::CTRL+Qt::Key_O);
+        if(ret)
+        {
+            //connect();
+            menu->addAction(action);
+        }
+    }
+    if(ret)
+    {
+        mb->addMenu(menu);
+    }
+    else
+    {
+        delete menu;
+    }
+
+    return ret;
+}
+bool MainWindow::makeAction(QAction*& action,QWidget* parent, QString text, int key)
+{
+    bool ret = true;
+
+    action = new QAction(text, parent);
+
+    if( action != NULL )
+    {
+        action->setShortcut(QKeySequence(key));
+    }
+    else
+    {
+        ret = false;
+    }
 
     return ret;
 }
