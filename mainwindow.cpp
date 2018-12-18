@@ -3,6 +3,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
+    setMinimumSize(400,400);
 }
 
 MainWindow* MainWindow::NewInstance()
