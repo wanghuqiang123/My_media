@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/btnIcon">
+        <file>Icon/pause.png</file>
+        <file>Icon/play.png</file>
+        <file>Icon/stop.png</file>
+        <file>Icon/volume.png</file>
+    </qresource>
+</RCC>
